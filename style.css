@@ -1,0 +1,164 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --sepia-dark: hsl(37, 25%, 30%);
+    --sepia-medium: hsl(37, 25%, 45%);
+    --sepia: hsl(37, 25%, 80%);
+    --sepia-light: hsl(37, 25%, 85%);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 96vh;
+    font-family: 'Comic neue', cursive;
+    background-color: var(--sepia-light);
+    color: var(--sepia-dark);
+}
+
+#console {
+    height: 50vh;
+    width: 25vw;
+    min-width: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--sepia-dark);
+    border-radius: 10px;
+    background-color: var(--sepia);
+}
+
+header {
+    min-height: 2rem;
+    height: 15%;
+    width: 100%;
+    border-bottom: 1px solid var(--sepia-dark); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem; 
+}
+
+#date, #time {
+    cursor: default;
+}
+
+main {
+    width: 100%;
+    flex: 1 1 auto;
+    overflow: auto;
+}
+
+footer {
+    min-height: 2rem;
+    width: 100%;
+    border-top: 1px solid var(--sepia-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Notes */
+
+.noteElement {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dashed var(--sepia-dark);
+}
+
+.noteElement:hover {
+    background-color: var(--sepia-light);
+}
+
+.noteElement:hover > button {
+    background-color: var(--sepia-light);
+}
+
+.noteContent {
+    display: flex;
+    align-items: center;
+}
+
+.markCompletedCheckbox {
+    display: inline;
+    margin: 0 1rem;
+}
+
+.noteText {
+    font-size: 1.1rem;
+    cursor: default;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: var(--sepia-medium);
+}
+
+/* Buttons and Input */
+
+button {
+    height: 2rem;
+    width: 2rem;
+    margin-right: 1.25rem;
+    background-color: var(--sepia);
+    cursor: pointer;
+    border: none;
+    color: var(--sepia-dark);
+}
+
+input {
+    min-height: 2rem;
+    flex: 1 1 auto;
+    margin: 1.25rem;
+}
+
+input[type='checkbox'] {
+    accent-color: var(--sepia-medium);
+    cursor: pointer;    
+}
+
+#add {
+    font-size: 1.25rem;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2rem;
+}
+
+#add:hover {
+    background-color: var(--sepia-light);
+}
+
+#newNote {
+    background-color: var(--sepia-light);
+    padding: 0 1rem;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Comic neue', cursive;
+    color: var(--sepia-dark);
+}
+
+#newNote:focus {
+    outline: none !important;
+    border: 1px solid var(--sepia-dark);
+    box-shadow: 0 0 5px var(--sepia-dark);
+}
+
+@media(max-width: 600px) {
+    body {
+        height: 100vh;
+    }
+    #console {
+        height: 100vh;
+        width: 100vw;
+    }
+}
+
