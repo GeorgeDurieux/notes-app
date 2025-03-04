@@ -26,6 +26,29 @@ git clone https://github.com/GeorgeDurieux/notes-app.git
 
 cd notes-app
 
+## Database Setup
+
+To set up the PostgreSQL database, follow these steps:
+
+1. Ensure you have PostgreSQL installed and running.
+
+2. Open a PostgreSQL terminal or pgAdmin query editor.
+
+3. Run the following command to create the database (if not already created):
+
+CREATE DATABASE notepad;
+
+4. Run the database.sql script to create the required tables:
+
+-- Inside PostgreSQL or pgAdmin, execute:
+
+\\c notepad -- Connect to the database
+
+-- Run the database.sql script (adjust path as needed):
+
+
+-- If using psql from terminal:
+\i path/to/sql/database.sql
 
 ## Usage
 
